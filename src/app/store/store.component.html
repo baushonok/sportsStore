@@ -3,17 +3,22 @@
 	<cart-summary></cart-summary>
 </div>
 <div class="col-xs-3 p-a-1">
-	<button type="submit"
+	<button type="button"
 			class="btn btn-block btn-outline-primary"
 			(click)="changeCategory()">
 		Home
 	</button>
-	<button type="submit"
+	<button type="button"
 			*ngFor="let cat of categories"
 			class="btn btn-outline-primary btn-block"
 			[class.active]="cat == selectedCategory"
 			(click)="changeCategory(cat)">
 		{{cat}}
+	</button>
+	<button type="button"
+			class="btn btn-block btn-danger m-t-3"
+			routerLink="/admin">
+		Admin
 	</button>
 </div>
 <div class="col-xs-3 bg-info p-a-1">
